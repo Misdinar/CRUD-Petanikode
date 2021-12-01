@@ -26,14 +26,51 @@ if( mysqli_num_rows($query) < 1 ){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Formulir Edit Siswa | SMK Coding</title>
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Pendaftaran Siswa Baru | SMK Coding</title>
+    <style type="text/css">
+    body{
+        /*padding-left: 4rem;*/
+        padding-top: 6rem;
+        padding-bottom: 5rem;
+        background-color: #FFEBCC;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .formulir{
+        border-radius:20px;
+        padding : 3rem 5rem;
+        margin-top: 4rem;
+        margin-left:25rem;
+        margin-right:25rem;
+        background-color: #FBFFE2;
+    }
+    .button {
+      background-color: white; 
+      color: black; 
+      border: 2px solid #FFAFAF;
+      padding: 10px 28px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border-radius:10px; */
+    }
+    
+    .button:hover {
+      background-color: #FF9999;
+      color: white;
+    }
+    </style>
+</head>
+    
 <body>
-    <header>
+    <header style="text-align: center;">
         <h3>Formulir Edit Siswa</h3>
     </header>
-
+    <div class="formulir">
     <form action="proses-edit.php" method="POST">
 
         <fieldset>
@@ -70,13 +107,15 @@ if( mysqli_num_rows($query) < 1 ){
             <input type="text" name="sekolah_asal" placeholder="nama sekolah" value="<?php echo $siswa['sekolah_asal'] ?>" />
         </p>
         <p>
-            <input type="submit" value="Simpan" name="simpan" />
+            <input class="button" type="submit" value="Simpan" name="simpan" />
         </p>
 
         </fieldset>
 
 
     </form>
+    </div>
+    
 
     </body>
 </html>
