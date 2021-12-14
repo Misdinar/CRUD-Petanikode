@@ -47,10 +47,13 @@
     </header>
 
     <div class="formulir">
-    <form action="proses-pendaftaran.php" method="POST">
+    <form action="proses-pendaftaran.php" method="POST" enctype="multipart/form-data">
 
         <fieldset>
-
+        <p>
+            <label for="nis">NIS: </label>
+            <input type="text" name="nis" placeholder="Nomor Induk Siswa" />
+        </p>
         <p>
             <label for="nama">Nama: </label>
             <input type="text" name="nama" placeholder="nama lengkap" />
@@ -77,6 +80,10 @@
         <p>
             <label for="sekolah_asal">Sekolah Asal: </label>
             <input type="text" name="sekolah_asal" placeholder="nama sekolah" />
+        </p>
+        <p>
+            <label for="foto">Foto: </label>
+            <input type="file" name="foto" placeholder="Foto" />
         </p>
         <p>
             <input class="button" type="submit" value="Daftar" name="daftar" />
