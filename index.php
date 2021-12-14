@@ -66,7 +66,10 @@
         <?php
             if($_GET['status'] == 'sukses'){
                 echo "Pendaftaran siswa baru berhasil!";
-            } else {
+            } 
+            else if ($_GET['status'] == 'suksesedit'){
+                echo "Perubahan siswa berhasil!";
+            }else {
                 echo "Pendaftaran gagal!";
             }
         ?>
