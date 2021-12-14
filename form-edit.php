@@ -71,12 +71,15 @@ if( mysqli_num_rows($query) < 1 ){
         <h3>Formulir Edit Siswa</h3>
     </header>
     <div class="formulir">
-    <form action="proses-edit.php" method="POST">
+    <form action="proses-edit.php" method="POST" enctype="multipart/form-data">
 
         <fieldset>
 
             <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>" />
-
+        <p>
+            <label for="nis">NIS: </label>
+            <input type="text" name="nis" placeholder="Nomor Induk Siswa" value="<?php echo $siswa['nis'] ?>" />
+        </p>
         <p>
             <label for="nama">Nama: </label>
             <input type="text" name="nama" placeholder="nama lengkap" value="<?php echo $siswa['nama'] ?>" />
@@ -105,6 +108,10 @@ if( mysqli_num_rows($query) < 1 ){
         <p>
             <label for="sekolah_asal">Sekolah Asal: </label>
             <input type="text" name="sekolah_asal" placeholder="nama sekolah" value="<?php echo $siswa['sekolah_asal'] ?>" />
+        </p>
+        <p>
+            <label for="foto">Foto: </label>
+            <input type="file" name="foto" placeholder="Foto" id="foto"/>
         </p>
         <p>
             <input class="button" type="submit" value="Simpan" name="simpan" />
